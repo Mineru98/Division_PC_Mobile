@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+	  <meta charset="utf-8">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <title>Division</title>
+	  <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+	  <script type="text/javascript">
+		  $(function division(){
+			  var filter = "win16|win32|win64|mac|macintosh";
+			  var vWebType="";
+			  if(navigator.platform) {
+				  if(filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+					  vWebType = "MOBILE";
+				  } else {
+					  vWebType = "PC";
+				  }
+			  }
+			  $("#h_tag").text(vWebType);
+		  });
+	  </script>
+	  <div className="one">
+		  <h1 id="h_tag">
+			  start
+		  </h1>
+	  </div>
+	  
+  </body>
+</html>
